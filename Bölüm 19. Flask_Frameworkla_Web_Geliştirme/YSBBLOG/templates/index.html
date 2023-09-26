@@ -1,0 +1,16 @@
+{% extends "layout.html" %}
+
+{% block body %}
+<div class='jumbotron text-center'>
+    <h3>Veri Bilimi Bloğuna Hoşgeldiniz</h3>
+    <p>Bu blokta veri bilimci olarak yazılarınızı paylaşabilirsiniz.</p>
+</div>
+
+<ul>
+    {% for article in articles %}
+        <li>Article ID: {{article.id}} - Title: {{article.title}} - Content: {{article.content}} </li>
+    {% endfor %}
+</ul>
+
+{% endblock body %}
+
